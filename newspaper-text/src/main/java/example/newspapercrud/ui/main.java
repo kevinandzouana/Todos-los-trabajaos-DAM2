@@ -54,7 +54,10 @@ public class main {
                 System.out.println("10. Modify rating of an Article");
                 System.out.println("11. Delete rating of an Article");
                 System.out.println("12. Get all Types");
-                System.out.println("13. Exit");
+                System.out.println("13. Add a new reader");
+                System.out.println("14. Delete a reader");
+                System.out.println("15. Add a new reader with credentials");
+                System.out.println("16. Exit");
                 System.out.print("Enter your choice: ");
 
                 // Validar entrada numérica

@@ -2,17 +2,21 @@ package example.newspapercrud.dao.basic;
 
 import example.newspapercrud.dao.ArticleRepository;
 import example.newspapercrud.dao.model.ArticleEntity;
+import example.newspapercrud.dao.model.TypeEntity;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 public class ArticleRepositoryBasic  {
-    private final List<ArticleEntity> storage = new ArrayList<>();
 
 
     public List<ArticleEntity> getAll() {
-        return new ArrayList<>(storage); // devolver copia para evitar modificaciones externas
+        List<ArticleEntity> articles = new ArrayList<>();
+        articles.add(new ArticleEntity(1,"art1", new TypeEntity(1, "sports"), 2));
+        articles.add(new ArticleEntity(2,"art2", new TypeEntity(1, "sports"), 2));
+        articles.add(new ArticleEntity(3,"art3", new TypeEntity(1, "sports"), 2));
+        return articles; // devolver copia para evitar modificaciones externas
     }
 
 

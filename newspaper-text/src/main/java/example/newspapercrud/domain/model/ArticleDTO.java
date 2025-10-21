@@ -1,40 +1,16 @@
 package example.newspapercrud.domain.model;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class ArticleDTO {
-    @Setter
     private int id;
-    @Setter
     private String name;
-    @Setter
-    private  TypeDTO type;
-    @Setter
+    private TypeDTO typeUI;
     private int npaperId;
-    @Setter
-    private double avgRanting;
-
-    public int getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public TypeDTO getType() {
-        return type;
-    }
-
-    public int getNpaperId() {
-        return npaperId;
-    }
-
-    public double getAvgRanting() {
-        return avgRanting;
-    }
-
-    public void setName(String name) {
-    }
+    private double avgRating;
 }

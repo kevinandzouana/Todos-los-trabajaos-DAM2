@@ -57,8 +57,7 @@ public class ArticleService {
         dto.setId(entity.getId());
         dto.setName(entity.getName());
         dto.setNpaperId(entity.getNpaperId());
-        dto.setAvgRanting(entity.getAvgRanting());
-        dto.setType(entity.getType()); // aquí asumo que entity.getType() devuelve un TypeDTO
+        dto.setType(dto.getType()); // aquí asumo que entity.getType() devuelve un TypeDTO
         return dto;
     }
 
@@ -67,8 +66,7 @@ public class ArticleService {
         entity.setId(dto.getId());
         entity.setName(dto.getName());
         entity.setNpaperId(dto.getNpaperId());
-        entity.setAvgRanting(dto.getAvgRanting());
-        entity.setType(dto.getType()); // idem arriba
+        entity.setType(entity.getType()); // idem arriba
         return entity;
     }
 }

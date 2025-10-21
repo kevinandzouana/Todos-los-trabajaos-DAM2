@@ -22,4 +22,5 @@ public interface ArticleRepository {
 
         boolean delete(int id);
 
+    boolean delete(ArticleEntity article, boolean confirmation);
 }
